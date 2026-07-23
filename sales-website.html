@@ -149,12 +149,21 @@
             animation: fadeInUp 0.8s ease 0.5s both;
         }
 
+        .payment-header {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 18px;
+        }
+
         .payment-options {
             display: flex;
             flex-direction: column;
             gap: 12px;
             max-width: 440px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
         }
 
         .cta-btn {
@@ -208,13 +217,20 @@
         }
 
         .cta-note {
-            font-size: 12px;
+            font-size: 13px;
             color: #888;
-            margin-top: 16px;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 440px;
+            margin: 0 auto;
             line-height: 1.6;
+            background: rgba(201, 162, 75, 0.1);
+            border: 1px solid rgba(201, 162, 75, 0.2);
+            padding: 16px;
+            border-radius: 10px;
+        }
+
+        .cta-note strong {
+            color: var(--gold);
+            font-weight: 600;
         }
 
         .payment-divider {
@@ -663,16 +679,19 @@
 
     <!-- CTA with Payment Options -->
     <div class="cta-block">
+        <div class="payment-header">💳 Multiple Ways to Purchase</div>
         <div class="payment-options">
             <a href="https://smithcorealty.gumroad.com/l/oabii" target="_blank" rel="noopener noreferrer" class="cta-btn">
-                Get the Guide <span class="price">$9.99</span>
+                📥 Instant Download via Gumroad <span class="price">$9.99</span>
             </a>
             <div class="payment-divider">— or —</div>
             <a href="https://cash.app/$smithandcorealty" target="_blank" rel="noopener noreferrer" class="cta-btn secondary">
                 💵 Pay via Cash App <span class="price">$9.99</span>
             </a>
         </div>
-        <p class="cta-note">Gumroad: Instant PDF download after payment. Cash App: Screenshot receipt and DM for guide.</p>
+        <p class="cta-note">
+            <strong>Choose your way:</strong> Gumroad gives you the PDF instantly after payment. Cash App: screenshot your receipt and DM it to me, and I'll send your guide right away.
+        </p>
     </div>
 
     <!-- WHAT'S INSIDE -->
@@ -736,7 +755,7 @@
         <div class="steps">
             <div class="step">
                 <div class="num">1</div>
-                <div class="txt"><strong>Choose Your Payment Method</strong><span>Gumroad (instant download) or Cash App (manual delivery)</span></div>
+                <div class="txt"><strong>Choose Your Payment Method</strong><span>Gumroad (instant PDF) or Cash App (manual delivery)</span></div>
             </div>
             <div class="step">
                 <div class="num">2</div>
@@ -744,7 +763,7 @@
             </div>
             <div class="step">
                 <div class="num">3</div>
-                <div class="txt"><strong>Get Your Guide</strong><span>Instant PDF or delivered via DM</span></div>
+                <div class="txt"><strong>Get Your Guide</strong><span>Instant download or delivered via DM within hours</span></div>
             </div>
         </div>
     </section>
@@ -755,21 +774,21 @@
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>How will I receive the guide?</span>
+                    <span>What's the difference between Gumroad and Cash App?</span>
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    With Gumroad: Get instant PDF download right after payment. With Cash App: Send me a screenshot of your receipt via DM and I'll send your guide right away.
+                    Gumroad: Fastest option - you get the PDF immediately after paying. Cash App: You pay, screenshot the receipt, DM it to me, and I'll send your guide within hours. Both cost $9.99, so choose whatever is easiest for you!
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>Which payment method should I use?</span>
+                    <span>How will I receive the guide?</span>
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    Gumroad is fastest - you get the PDF immediately! Cash App works too if you prefer, just DM me your receipt screenshot.
+                    With Gumroad: Get instant PDF download right after payment. With Cash App: Send me a screenshot of your receipt via DM and I'll send your guide right away.
                 </div>
             </div>
 
@@ -799,7 +818,7 @@
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    Yes, Gumroad offers refunds within their policy. If you're not satisfied, reach out and we'll help you.
+                    Yes, Gumroad offers refunds within their policy. If you're not satisfied, reach out and we'll help you. For Cash App purchases, I'm happy to work with you directly.
                 </div>
             </div>
 
@@ -839,9 +858,10 @@
     <section class="final">
         <h2>Your first $10,000 is closer than you think.</h2>
         <p>One step, one system, one guide away.</p>
-        <div class="payment-options" style="max-width: 440px;">
+        <div class="payment-header" style="margin-top: 30px;">💳 Multiple Ways to Purchase</div>
+        <div class="payment-options" style="max-width: 440px; margin-top: 18px;">
             <a href="https://smithcorealty.gumroad.com/l/oabii" target="_blank" rel="noopener noreferrer" class="cta-btn">
-                Get the Guide <span class="price">$9.99</span>
+                📥 Instant Download via Gumroad <span class="price">$9.99</span>
             </a>
             <div class="payment-divider">— or —</div>
             <a href="https://cash.app/$smithandcorealty" target="_blank" rel="noopener noreferrer" class="cta-btn secondary">
