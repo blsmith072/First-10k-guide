@@ -142,11 +142,19 @@
             font-weight: 700;
         }
 
-        /* CTA Button */
+        /* CTA Button Container */
         .cta-block {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             animation: fadeInUp 0.8s ease 0.5s both;
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 440px;
+            margin: 0 auto;
         }
 
         .cta-btn {
@@ -155,15 +163,14 @@
             justify-content: center;
             gap: 12px;
             width: 100%;
-            max-width: 440px;
             background: linear-gradient(135deg, var(--deep), var(--deep-2));
             color: white;
             text-decoration: none;
             font-family: 'Work Sans', sans-serif;
             font-weight: 700;
-            font-size: 17px;
-            padding: 20px 30px;
-            border-radius: 50px;
+            font-size: 16px;
+            padding: 16px 30px;
+            border-radius: 12px;
             box-shadow: 0 8px 22px rgba(15, 61, 62, 0.35);
             transition: all 0.3s ease;
             border: none;
@@ -182,20 +189,39 @@
         .cta-btn .price {
             background: var(--gold);
             color: var(--deep-2);
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
-            padding: 5px 14px;
-            border-radius: 20px;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            box-shadow: none;
+        }
+
+        .cta-btn.secondary:hover {
+            background: var(--gold);
+            color: var(--deep-2);
         }
 
         .cta-note {
-            font-size: 13px;
+            font-size: 12px;
             color: #888;
-            margin-top: 18px;
+            margin-top: 16px;
             max-width: 400px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.6;
+        }
+
+        .payment-divider {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            margin: 8px 0;
         }
 
         /* What's Inside Section */
@@ -598,8 +624,8 @@
             }
 
             .cta-btn {
-                font-size: 15px;
-                padding: 16px 20px;
+                font-size: 14px;
+                padding: 14px 20px;
             }
         }
     </style>
@@ -635,12 +661,18 @@
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA with Payment Options -->
     <div class="cta-block">
-        <a href="https://cash.app/$smithandcorealty" target="_blank" rel="noopener noreferrer" class="cta-btn">
-            Get the Guide <span class="price">$9.99</span>
-        </a>
-        <p class="cta-note">Tap to pay on Cash App, then screenshot your receipt and send it to my DMs — I'll send your guide right away.</p>
+        <div class="payment-options">
+            <a href="https://smithcorealty.gumroad.com/l/oabii" target="_blank" rel="noopener noreferrer" class="cta-btn">
+                Get the Guide <span class="price">$9.99</span>
+            </a>
+            <div class="payment-divider">— or —</div>
+            <a href="https://cash.app/$smithandcorealty" target="_blank" rel="noopener noreferrer" class="cta-btn secondary">
+                💵 Pay via Cash App <span class="price">$9.99</span>
+            </a>
+        </div>
+        <p class="cta-note">Gumroad: Instant PDF download after payment. Cash App: Screenshot receipt and DM for guide.</p>
     </div>
 
     <!-- WHAT'S INSIDE -->
@@ -704,7 +736,7 @@
         <div class="steps">
             <div class="step">
                 <div class="num">1</div>
-                <div class="txt"><strong>Click "Get the Guide"</strong><span>Secure payment on Cash App</span></div>
+                <div class="txt"><strong>Choose Your Payment Method</strong><span>Gumroad (instant download) or Cash App (manual delivery)</span></div>
             </div>
             <div class="step">
                 <div class="num">2</div>
@@ -712,7 +744,7 @@
             </div>
             <div class="step">
                 <div class="num">3</div>
-                <div class="txt"><strong>Screenshot & DM</strong><span>Send receipt and I'll deliver your guide personally</span></div>
+                <div class="txt"><strong>Get Your Guide</strong><span>Instant PDF or delivered via DM</span></div>
             </div>
         </div>
     </section>
@@ -727,7 +759,17 @@
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    After you send me a screenshot of your receipt via DM, I'll send your guide right away via email or direct message.
+                    With Gumroad: Get instant PDF download right after payment. With Cash App: Send me a screenshot of your receipt via DM and I'll send your guide right away.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Which payment method should I use?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Gumroad is fastest - you get the PDF immediately! Cash App works too if you prefer, just DM me your receipt screenshot.
                 </div>
             </div>
 
@@ -757,7 +799,7 @@
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
-                    Yes, we offer a 30-day money-back guarantee. If you're not satisfied, just reach out and we'll refund your purchase, no questions asked.
+                    Yes, Gumroad offers refunds within their policy. If you're not satisfied, reach out and we'll help you.
                 </div>
             </div>
 
@@ -797,9 +839,15 @@
     <section class="final">
         <h2>Your first $10,000 is closer than you think.</h2>
         <p>One step, one system, one guide away.</p>
-        <a href="https://cash.app/$smithandcorealty" target="_blank" rel="noopener noreferrer" class="cta-btn">
-            Get the Guide <span class="price">$9.99</span>
-        </a>
+        <div class="payment-options" style="max-width: 440px;">
+            <a href="https://smithcorealty.gumroad.com/l/oabii" target="_blank" rel="noopener noreferrer" class="cta-btn">
+                Get the Guide <span class="price">$9.99</span>
+            </a>
+            <div class="payment-divider">— or —</div>
+            <a href="https://cash.app/$smithandcorealty" target="_blank" rel="noopener noreferrer" class="cta-btn secondary">
+                💵 Pay via Cash App <span class="price">$9.99</span>
+            </a>
+        </div>
     </section>
 
     <footer>
